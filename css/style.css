@@ -1,0 +1,27 @@
+:root {
+    --color-blue-light1: #99c3ff;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-blue-light1);
+}
+
+a:visited {
+    color: #c58af9;
+}
