@@ -6,10 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Search</title>
     <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./scripts/app.js" defer></script>
 </head>
 
 <body>
+    <div class="site-wrapper">
+        <div class="google-logo">
+            <img class="google-logo__image" alt="Google" src="./images/google-logo_light_color_2x.png"
+                srcset="./images/google-logo_light_color_1x.png 1x, ./images/google-logo_light_color_2x.png 2x">
+            <span class="google-logo__title">images</span>
+        </div>
 
+        <ul class="search-page-list">
+            <li class="search-page-list__item">
+                <a href="./index.html" class="search-page-list__link">
+                    <svg class="search-page-list__icon">
+                        <use xlink:href="images/icons/sprite.svg#icon-forward"></use>
+                    </svg>
+                    Google Search
+                </a>
+            </li>
+        </ul>
+
+        <form action="https://www.google.com/search" class="google-search-form">
+            <div class="google-search-form__row">
+                <input type="text" class="google-search-form__input" name="q">
+                <input type="hidden" name="udm" value="2">
+                <ul class="google-search-form__icon-list">
+                    <li class="google-search-form__icon-list-item google-search-form__icon-list-item--1 hidden"
+                        title="Clear">
+                        <span class="google-search-form__clear-btn" href="">
+                            <svg class="google-search-form__icon">
+                                <use xlink:href="./images/icons/sprite.svg#close"></use>
+                            </svg>
+                        </span>
+                    </li>
+                    <li class="google-search-form__icon-list-item" title="Search by voice">
+                        <a class="google-search-form__link" href="#">
+                            <svg class="google-search-form__icon">
+                                <use xlink:href="./images/icons/sprite.svg#mic"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="google-search-form__icon-list-item" title="Search by image">
+                        <a class="google-search-form__link" href="#">
+                            <svg class="google-search-form__icon">
+                                <use xlink:href="./images/icons/sprite.svg#camera"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="google-search-form__icon-list-item">
+                        <button class="google-search-form__magnifying-glass-btn" href="">
+                            <svg class="google-search-form__icon">
+                                <use xlink:href="./images/icons/sprite.svg#magnifying-glass"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="google-search-form__submit-btns">
+                <input type="submit" class="google-search-form__submit-btn" value="Google Search"
+                    aria-label="Google Search" tabindex=0 role="btn" name="btnK">
+                <input type="submit" class="google-search-form__submit-btn" value="I'm Feeling Lucky"
+                    aria-label="I'm Feeling Lucky" tabindex=0 role="btn" name="btnI">
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>

@@ -1,7 +1,8 @@
 :root {
     --color-light1: #ffffff;
 
-    --color-blue-light1: #99c3ff;
+    --color-blue1: #99c3ff;
+    --color-blue2: #4487f6;
     --color-purple: #c58af9;
 
     --color-grey-light1: #cccdcf;
@@ -64,11 +65,19 @@ body {
 
 .google-logo {
     width: calc(8em + 12%);
+    position: relative;
 }
 
 .google-logo__image {
     display: block;
     width: 100%;
+}
+
+.google-logo__title {
+    color: var(--color-blue2);
+    position: absolute;
+    right: 0.5em;
+    bottom: 0;
 }
 
 /* Pages navigation 
@@ -79,6 +88,14 @@ body {
     list-style-type: none;
     top: 20px;
     right: 2.2em;
+}
+
+.search-page-list__icon {
+    width: 1.5em;
+    height: 1.5em;
+    fill: currentColor;
+    transform: rotateY(180deg);
+    margin-right: 0.3em;
 }
 
 .search-page-list__item {
@@ -94,7 +111,8 @@ body {
 }
 
 .search-page-list__link {
-    display: block;
+    display: flex;
+    align-items: center;
     font-size: calc(12px + 0.3vw);
     padding: 0.4em;
     text-transform: capitalize;
@@ -215,7 +233,7 @@ body {
 
 
 .google-search-form__magnifying-glass-btn .google-search-form__icon {
-    fill: var(--color-blue-light1);
+    fill: var(--color-blue1);
 }
 
 .google-search-form__submit-btns {
@@ -238,3 +256,7 @@ body {
 .google-search-form__submit-btn:hover {
     border: 1px solid rgba(100, 105, 110, 1);
 }
+
+
+/* Image Search page styles
+*/
