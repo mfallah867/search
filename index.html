@@ -23,11 +23,11 @@
 
         <form action="https://www.google.com/search" class="google-search-form">
             <div class="google-search-form__row">
-                <input type="text" class="google-search-form__input">
+                <input type="text" class="google-search-form__input" name="q">
                 <ul class="google-search-form__icon-list">
                     <li class="google-search-form__icon-list-item google-search-form__icon-list-item--1 hidden"
                         title="Clear">
-                        <span class="google-search-form__btn" href="">
+                        <span class="google-search-form__clear-btn" href="">
                             <svg class="google-search-form__icon">
                                 <use xlink:href="./images/icons/sprite.svg#close"></use>
                             </svg>
@@ -48,15 +48,20 @@
                         </a>
                     </li>
                     <li class="google-search-form__icon-list-item">
-                        <a class="google-search-form__link" href="">
-                            <svg class="google-search-form__icon google-search-form__icon--magnifying-glass">
+                        <button class="google-search-form__magnifying-glass-btn" href="">
+                            <svg class="google-search-form__icon">
                                 <use xlink:href="./images/icons/sprite.svg#magnifying-glass"></use>
                             </svg>
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </div>
-            <input type="submit" class="google-sreach-form__btn">
+            <div class="google-search-form__submit-btns">
+                <input type="submit" class="google-search-form__submit-btn" value="Google Search"
+                    aria-label="Google Search" tabindex=0 role="btn" name="btnK">
+                <input type="submit" class="google-search-form__submit-btn" value="I'm Feeling Lucky"
+                    aria-label="I'm Feeling Lucky" tabindex=0 role="btn" name="btnI">
+            </div>
         </form>
     </div>
 </body>

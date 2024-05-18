@@ -1,20 +1,38 @@
 'use strict';
 
-const searchFormClearBtnEle = document.querySelector(
+// Cache DOM elements
+const clearButton = document.querySelector(
 	'.google-search-form__icon-list-item--1'
 );
+const searchFormRow = document.querySelector('.google-search-form__row');
+const searchInput = document.querySelector('.google-search-form__input');
 
-const searchFormInputEle = document.querySelector('.google-search-form__input');
-searchFormInputEle.addEventListener('keyup', e => {
+// Event handler for google search input keyup
+function handleInputKeyup(e) {
 	if (e.target.value.length > 0) {
-		searchFormClearBtnEle.classList.remove('hidden');
+		clearButton.classList.remove('hidden');
 	} else {
-		searchFormClearBtnEle.classList.add('hidden');
+		clearButton.classList.add('hidden');
 	}
-});
+}
 
-searchFormClearBtnEle.addEventListener('click', e => {
-	searchFormInputEle.value = '';
-});
+// Event handler for google search clear button click
+function handleClearButtonClick() {
+	searchInput.value = '';
+}
 
-// searchFormClearBtnEle.addEventListener()
+// Event handler for google search input focus
+function handleInputFocus() {
+	searchFormRow.classList.add('google-search-form__row--grey');
+}
+
+// Event handler for google search input blur
+function handleInputBlur() {
+	searchFormRow.classList.remove('google-search-form__row--grey');
+}
+
+// Attach event listeners
+searchInput.addEventListener('keyup', handleInputKeyup);
+clearButton.addEventListener('click', handleClearButtonClick);
+searchInput.addEventListener('focus', handleInputFocus);
+searchInput.addEventListener('blur', handleInputBlur);
