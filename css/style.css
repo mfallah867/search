@@ -5,6 +5,8 @@
     --color-purple: #c58af9;
 
     --color-grey-light1: #cccdcf;
+    --color-grey-light2: #57615d;
+
     --color-grey-dark1: #303134;
     --color-grey-dark2: #202124;
 }
@@ -45,12 +47,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .site-wrapper {
     display: flex;
     position: relative;
     min-height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Pages navigation 
+*/
 .search-page-list {
     position: absolute;
     display: flex;
@@ -74,6 +81,91 @@ body {
 .search-page-list__link {
     display: block;
     font-size: calc(12px + 0.3vw);
-    padding: 0.3rem;
+    padding: 0.4em;
     text-transform: capitalize;
 }
+
+.search-page-list__link:hover {
+    text-decoration: underline;
+}
+
+
+/* Search form
+*/
+.google-search-form {
+    display: flex;
+    flex-flow: column;
+    width: 70%;
+    max-width: 576px;
+    min-width: 300px;
+    background-color: transparent;
+    font-size: calc(0.7em + 0.4vw);
+}
+
+.google-search-form__row {
+    border: 1px solid var(--color-grey-light2);
+    border-radius: 10em;
+    display: flex;
+    width: 100%;
+}
+
+.google-search-form__input {
+    flex-grow: 1;
+    background-color: transparent;
+    padding: 0.8rem 0 0.8rem 1.2em;
+    border: none;
+    outline: none;
+    font: inherit;
+    color: inherit;
+}
+
+.google-search-form__icon-list {
+    display: flex;
+    list-style-type: none;
+    padding-right: 0.5em;
+}
+
+.google-search-form__icon-list-item {
+    cursor: pointer;
+    margin: 0 0.1em;
+}
+
+.google-search-form__icon-list-item--1 {
+    display: flex;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.google-search-form__icon-list-item--1::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 70%;
+    background-color: var(--color-grey-light1);
+}
+
+.google-search-form__link,
+.google-search-form__btn {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 0.4em;
+}
+
+.google-search-form__icon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.google-search-form__btn .google-search-form__icon {
+    fill: var(--color-grey-light1);
+}
+
+.google-search-form__icon--magnifying-glass {
+    fill: var(--color-blue-light1);
+}
+
+.google-sreach-form__btn {}
