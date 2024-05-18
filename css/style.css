@@ -53,10 +53,22 @@ body {
 
 .site-wrapper {
     display: flex;
+    flex-flow: column;
+    gap: 2.2em;
     position: relative;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
+}
+
+
+.google-logo {
+    width: calc(8em + 12%);
+}
+
+.google-logo__image {
+    display: block;
+    width: 100%;
 }
 
 /* Pages navigation 
