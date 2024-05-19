@@ -19,6 +19,7 @@ function handleInputKeyup(e) {
 // Event handler for google search clear button click
 function handleClearButtonClick() {
 	searchInput.value = '';
+	clearButton.classList.add('hidden');
 }
 
 // Event handler for google search input focus

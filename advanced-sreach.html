@@ -9,7 +9,72 @@
 </head>
 
 <body>
+    <div class="site-wrapper site-wrapper--advanced-search">
+        <header class="header">
+            <div class="google-logo google-logo--small">
+                <a href="./index.html">
+                    <img class="google-logo__image" alt="Google" src="./images/google-logo_light_color_2x.png"
+                        srcset="./images/google-logo_light_color_1x.png 1x, ./images/google-logo_light_color_2x.png 2x">
+                </a>
+            </div>
 
+            <ul class="search-page-list">
+                <li class="search-page-list__item">
+                    <a href="./index.html" class="search-page-list__link">
+                        <svg class="search-page-list__icon">
+                            <use xlink:href="images/icons/sprite.svg#icon-forward"></use>
+                        </svg>
+                        Google Search
+                    </a>
+                </li>
+            </ul>
+
+            <h1 class="heading">advanced search</h1>
+        </header>
+
+        <main class="main">
+            <form action="https://www.google.com/search" class="advanced-search-form">
+                <div class="advanced-search-form__row">
+                    <p class="advanced-search-form__title advanced-search-form__title--1">Find pages with...</p>
+                    <p class="advanced-search-form__title advanced-search-form__title--2">To do this in the search box.
+                    </p>
+                </div>
+                <div class="advanced-search-form__row">
+                    <label class="advanced-search-form__label" for="all">all these words:</label>
+                    <input id="all" type="text" class="advanced-search-form__input" name="as_q" autofocus="autofocus">
+                    <p class="advanced-search-form__example">Type important words: <span>tri-color rat terrier</span>
+                    </p>
+                </div>
+                <div class="advanced-search-form__row">
+                    <label class="advanced-search-form__label" for="exact">this exact word or phrase:</label>
+                    <input id="exact" type="text" class="advanced-search-form__input" name="as_epq"
+                        autofocus="autofocus">
+                    <p class="advanced-search-form__example">Put exact words in quotes: <span>"rat terrier"</span></p>
+                </div>
+                <div class="advanced-search-form__row">
+                    <label class="advanced-search-form__label" for="any">any of these words:</label>
+                    <input id="any" type="text" class="advanced-search-form__input" name="as_oq" autofocus="autofocus">
+                    <p class="advanced-search-form__example">Type <span>OR</span> between all the words you want:
+                        <span>miniature OR standard</span>
+                    </p>
+                </div>
+                <div class="advanced-search-form__row">
+                    <label class="advanced-search-form__label" for="none">none of these words:</label>
+                    <input id="none" type="text" class="advanced-search-form__input" name="as_eq" autofocus="autofocus">
+                    <p class="advanced-search-form__example">Put a minus sign just before words that you don't want:
+                        <span>-rodent, -"Jack Russell"</span>
+                    </p>
+                </div>
+                <div class="advanced-search-form__row">
+                    <span class="advanced-search-form__label"></span>
+                    <input type="submit" class="advanced-search-form__btn" value="Advanced Search">
+                    <span class="advanced-search-form__example"></span>
+                </div>
+            </form>
+        </main>
+        <footer class="footer"></footer>
+
+    </div>
 </body>
 
 </html>
